@@ -1,14 +1,19 @@
-import tkinter as tk
+import tkinter as tk 
 
-# criar a janela principal 
-root = tk.tk ()
-root.title ("aplicativo hello word")
-root.geometry ("300x100") # Definir tamanho da janela
+janela = tk.Tk()
+janela.title("minha primeira janela")
+janela.geometry ("400x300")
+janela.update_idletasks()
+largura = janela.winfo_width()
+altura = janela.winfo_height()
+x = (janela.winfo_screenwidth() // 2) - (largura // 2)
+y = (janela.winfo_screenheight() // 2) - (altura // 2)
+janela.geometry(f"400x300+{x}+{y}")
+")
 
-#Adicionar um rotulo com a mensagem 
-label = tk.label (root, text = "Olá, mundo!", font= "Arial", 16))
-label.pack (pady= 20 ) #Adicionar espaçamento 
-
-#iniciar loop principal da aplicação 
-
-root.mainloop ()
+label = tk.label (
+janela,
+text = "janela criada com sucesso!"
+font = ("Arial", 14)
+justify = "center"
+)
